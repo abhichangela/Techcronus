@@ -1,0 +1,53 @@
+.row{
+    clear: both;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h3{
+    padding-left: 10px;
+}
+
+.topheader{
+    text-align: center;
+}
+
+header{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: darkred;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card{
+    height: 500px;
+    width: 600px;
+    margin: auto;
+}
+
+dt,dd{
+    font-size: 20px;
+}
+
+.inputData{
+    display: inline-block;
+}
+
+li{
+    cursor: pointer;
+    text-align: center;
+    color: darkslateblue;
+    background-color: floralwhite;
+    border: 1px solid brown;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.footer{
+    text-align: center;
+    font-weight: bold;
+    color: brown;
+}

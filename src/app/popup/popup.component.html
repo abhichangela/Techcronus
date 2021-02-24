@@ -1,0 +1,50 @@
+<div>
+    <form (ngSubmit)="savedata(form)" #form="ngForm">
+        <div mat-dailog-content>
+            <button type="button" (click)="closeBox(form)" style="margin-left: 300px; cursor: pointer;">
+                <i class="fa fa-window-close" aria-hidden="true"></i></button>
+
+            <input type="hidden" name="id" [(ngModel)]="SaveData.id">
+
+            <label>Enter First name</label> <br/>
+            <mat-form-field>
+            <mat-label>First name</mat-label>
+            <input matInput [(ngModel)]="SaveData.fname" name="fname" required>
+            </mat-form-field> <br/>
+
+            <label>Enter Last name</label> <br/>
+            <mat-form-field>
+            <mat-label>Last name</mat-label>
+            <input matInput [(ngModel)]="SaveData.lname" name="lname" required>
+            </mat-form-field> <br/>
+
+            <label>Select your gender</label> <br/> <br/>
+            <mat-radio-group aria-label="Select an option" [(ngModel)]="SaveData.gender" name="SaveData.gender">
+                <mat-radio-button value="Male">Male</mat-radio-button> &nbsp;
+                <mat-radio-button value="Female">Female</mat-radio-button>
+            </mat-radio-group> <br/> <br/>
+
+            <label>Enter your age</label> <br/>
+            <mat-form-field>
+                <mat-label>Age</mat-label>
+                <input type="number" matInput [(ngModel)]="SaveData.age" name="age" required >
+              </mat-form-field> <br/>
+
+            <label>Enter city name</label> <br/>
+            <mat-form-field>
+                <mat-label>City name</mat-label>
+                <input matInput [(ngModel)]="SaveData.city" name="city" required>
+            </mat-form-field> <br/>
+
+            <label>Enter country Name</label> <br/>
+            <mat-form-field>
+                <mat-label>Country name</mat-label>
+                <input matInput [(ngModel)]="SaveData.country" name="country" required>
+            </mat-form-field> <br/>    
+        </div>
+
+        <div mat-dailog-actions>
+            <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Save</button>
+        </div>
+    </form>
+</div>

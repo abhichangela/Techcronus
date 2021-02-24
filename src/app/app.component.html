@@ -1,0 +1,43 @@
+<div>
+    <button (click)="openForm()" style="float: right; margin: 10px; font-size: 25px;">
+        <span style="cursor: pointer;" class="fa fa-plus-circle" aria-hidden="true"></span></button>
+    <div class="row">
+        <div class="col-3">
+            <h3 style="text-align: center;">Users<button (click)="removeData()" style="float: right;background-color: rgb(238, 115, 115);">
+                <span style="cursor: pointer;">
+                <i class="fa fa-trash" aria-hidden="true"></i></span></button></h3> <br/>
+            <ul>
+                <li *ngFor="let m of displayDetail">
+                    <p (click)="nameFun(m)" class="inputData">{{m.fname}} {{m.lname}}</p> &nbsp;
+                    <input type="checkbox" [(ngModel)]="m.isChecked" (change)="selectedChange()">
+                </li> <br/>
+            </ul>
+        </div>
+        <div class="col-9" *ngIf="personDetail">
+            <h3 class="topheader">Person Detail</h3>
+            <div class="card">
+                <div class="card-header">
+                    <header>{{newDisplay.fname}} {{newDisplay.lname}}</header>
+                </div>
+                <div class="card-body text-center">
+                    <dl>
+                        <dt>Age</dt>
+                        <dd>{{newDisplay.age}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>Gender</dt>
+                        <dd>{{newDisplay.gender}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>City</dt>
+                        <dd>{{newDisplay.city}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>Country</dt>
+                        <dd>{{newDisplay.country}}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
